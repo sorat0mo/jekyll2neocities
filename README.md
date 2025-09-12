@@ -18,7 +18,7 @@ I solicited help from GitHub Copilot in helping me modify the original code. If 
 
 4. Added giscus for comments. It's optinal, if you don't want it, you can remove it.
 
-5. Added limited HSTS and CSP via injecting `<meta>` tags in `<head>`.
+5. Added limited CSP via injecting `<meta>` tags in `<head>`.
 
 6. Added RSS and Fediverse verification.
 
@@ -34,8 +34,7 @@ I solicited help from GitHub Copilot in helping me modify the original code. If 
 | `description`               | The subheader of your site, also used for SEO.                                                                                                                                                                                                                                                                                                             |
 | `url`                       | The hostname for your site. If you are hosting on GitHub Pages, this will be your pages url, for example, `https://examples.github.io`                                                                                                                                                                                                                     |
 | `baseurl`                   | The baseurl/folder your site is located. Set this to `""` if your site is located at the root of your url (see example above)                                                                                                                                                                                                                              |
-| `use_HSTS`                  | Implement limited HSTS for GitHub Pages. Set to false ONLY IF you are serving HSTS Headers elsewhere (e.g. Cloudflare/Vercel/Your server)                                                                                                                                                                                                                  |
-| `use_CSP`                   | Implement limited CSP for GitHub Pages. Set to false ONLY IF you are serving CSP Headers elsewhere (e.g. Cloudflare/Vercel/Your server)                                                                                                                                                                                                                    |
+| `use_CSP`                   | Implement limited CSP for GitHub Pages. Set to false IF you are serving CSP Headers elsewhere (e.g. Cloudflare/Vercel/Your server)                                                                                                                                                                                                                    |
 | `orig_theme_author`         | Show Credits to jekyllBear's author, knhash?                                                                                                                                                                                                                                                                                                               |
 | `author`                    | Your name.                                                                                                                                                                                                                                                                                                                                                 |
 | `author_url`                | The link to jump to when clicking your name in the footer. If you did not set this, the site base url is used.                                                                                                                                                                                                                                             |
@@ -47,6 +46,9 @@ I solicited help from GitHub Copilot in helping me modify the original code. If 
 | `blog_tagline`              | Some lines to display atop your blog feed.                                                                                                                                                                                                                                                                                                                 |
 | `giscus`                    | This group of settings is to be used if you want to add comments to your blog posts. Comment out **all** of them if you do not wish to add comments to your posts.                                                                                                                                                                                         |
 | `links` and `special_links` | More links on the header. Use `links` for webpages and files in your website. Use `special_links` for external links.                                                                                                                                                                                                                                      |
+
+## About CSP
+It is a secure header meant to protect your site from XSS attacks. If you decide to add any extra resources (CSS stylesheets, external scripts), you need to add them to the CSP to whitelist them.
 
 ## To-do
 

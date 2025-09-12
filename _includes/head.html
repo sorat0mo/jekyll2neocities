@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    {% if site.use_HSTS %}<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">{% endif %}
     {% if site.use_CSP %}<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://giscus.app; style-src 'self' https://fonts.googleapis.com https://giscus.app; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://upload.wikimedia.org https://avatars.githubusercontent.com https://user-images.githubusercontent.com; connect-src 'self'; object-src 'none'; frame-src https://giscus.app; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">{% endif %}
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png">
