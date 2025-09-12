@@ -52,15 +52,19 @@ strong, b {
 
 /* LINKS */
 a, 
-a.notfound:visited {
+a.notfound:visited,
+nav a:visited,
+footer.bottom-footer a:visited {
     color: var(--text-color);
     text-decoration: none;
     transition: none;
 }
 
+a:focus,
 a:hover,
 a.notfound:visited:hover,
-a:focus {
+nav a:visited:hover,
+footer.bottom-footer a:visited:hover {
     color: var(--link-color);
     text-decoration: underline;
 }
