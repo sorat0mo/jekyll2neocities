@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+<header>
+    <h2 class="title">{{ site.title }}</h2>
+    <h3>{{ site.description }}</h3>
+    <nav>
+        <p>
+            <a href="{{ site.url }}{{ site.baseurl }}">Home</a> 
+            {% unless site.blog_as_home %}
+            	{% assign blog_page = site.pages | where: "path", "blog.md" | first %}
+  		  <a href="{{ site.url }}{{ site.baseurl }}{{ blog_page.url }}">Blog</a>
+            {% endunless %}
+        
+            {% for link in site.links %}
+                <a href="{{ site.url }}{{ site.baseurl }}{{ link[1] }}">{{ link[0] }}</a>
+            {% endfor %}
+            
+            {% for link in site.special_links %}
+                    <a href="{{ link[1] }}">[{{ link[0] }}]</a>
+            {% endfor %}
+            <a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS Feed">RSS</a>
+        </p>
+    </nav>
+</header>

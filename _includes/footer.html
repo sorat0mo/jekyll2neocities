@@ -1,0 +1,9 @@
+<footer class="bottom-footer">
+  <div class="footer-credits">
+    <i><a href="https://knhash.in/jekyllBear">jekyllBear</a> by <a href="https://knhash.in">knhash</a></i>
+  </div>
+  <div class="footer-author">
+    <span><i><a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a> by <a href="{% if site.author_url %}{{ site.author_url }}{% else %}{{ site.url }}{% endif %}">{{ site.author }}</a>.</span>
+    <span>{% if site.copyright_url %}<a href="{{ site.copyright_url}}">{% endif %}{{ site.copyright }}{% if site.copyright_url %}</a>{% endif %}</i></span>
+  </div>
+</footer>

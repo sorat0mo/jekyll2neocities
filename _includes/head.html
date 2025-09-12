@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png">
+    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
+    <link href='{{ site.url }}{{ site.baseurl }}/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/core.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/' | append: site.site_theme | append: '.css' | relative_url }}">
+    <script src="{{ '/assets/main.js' | relative_url }}"></script>
+    {% if site.fediverse_verify %}{% for url in site.fediverse_verify %}<link rel="me" href="{{ url }}">{% endfor %}{% endif %}
+</head>
+
+<body>

@@ -1,0 +1,56 @@
+---
+layout: compress
+---
+
+{% include head.html %}
+
+<main>
+
+    {% include header.html %}
+
+    
+    <h1>{{ page.title }}</h1>
+    <i>{{ page.date | date: "%b %d, %Y" }}</i>
+    {% if post.subtitle %}<h4 class="subtitle">{{ page.subtitle }}</h4>{% endif %}
+
+    {{ page.content }}
+
+    <small>{% for tag in page.tags %}<a href="{{ '/tagged/' | relative_url }}{{ tag }}">#{{ tag }}</a>{% endfor %}</small>
+    
+    <nav class="post-nav">
+    {% if page.previous %}
+    <a class="prev-post" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next %}
+    <a class="next-post" href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>
+    {% endif %}
+    </nav>
+
+</main>
+
+{% if site.giscus.repo_id and site.giscus.hostname %}
+<br>
+<script src="https://{{ site.giscus.hostname }}/client.js"
+        data-repo="{{ site.giscus.repo }}"
+        data-repo-id="{{ site.giscus.repo_id }}"
+        data-category="{{ site.giscus.category }}"
+        data-category-id="{{ site.giscus.category_id }}"
+        data-mapping="{{ site.giscus.mapping }}"
+        data-strict="{{ site.giscus.strict }}"
+        data-reactions-enabled="{{ site.giscus.reactions_enabled }}"
+        data-emit-metadata="{{ site.giscus.emit_metadata }}"
+        data-lang="{{ site.giscus.lang }}"
+        data-input-position="{{ site.giscus.input_position }}"
+        data-theme="{{ site.giscus.theme }}"
+        {% if site.giscus.lazy %}data-loading="lazy"{% endif %}
+        crossorigin="anonymous"
+        async>
+</script>
+
+{% endif %}
+
+{% include footer-post.html %}
+
+</body>
+
+</html>

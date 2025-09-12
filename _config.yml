@@ -1,0 +1,93 @@
+#########################
+# Settings
+
+title: BearlyJekyll
+description: A beary cool theme for Jekyll
+url: https://sorat0mo.github.io # Hostname for your site
+baseurl: /bearlyjekyll # This should be "" IF the site files are at the root, i.e. https://example.com/
+
+# Author details, your details.
+author: Karsten # Your name
+author_url: https://karsten.ws # Your site. Used in footer. If unset, uses site url.
+copyright: Some rights reserved # Copyright text in footer.
+copyright_url: https://opensource.org/licenses/MIT # leave empty if you do not have a license to link to
+
+# Fediverse
+fediverse_verify: # Links to verify you. Ask your server for instructions.
+ #- https://mastodon.social/@yourusername
+ #- https://misskey.io/@yourusername
+
+# Blog display settings
+site_theme: bear # bear (default), pine, sunset, geek
+blog_as_home: false # true/false - if you set to false, you can set how your blog url will be, check blog.md
+blog_tagline: Paws, claws, and thoughts—notes from a bear’s den.
+
+# Comments. I only added giscus for support, feel free to expand yourself.
+#giscus: # Go to giscus.app for instructions on how to use
+#  hostname             : giscus.app # Default, change if you host your own instance
+#  repo                 : sorat0mo/bearlyjekyll #The path to your repo
+#  repo_id              : R_kgDOPtN4aA # Shown during giscus setup at https://giscus.app
+#  category_name        : General # Full text name of the category
+#  category_id          : DIC_kwDOPtN4aM4CvPyG # Shown during giscus setup at https://giscus.app
+#  mapping              : pathname # "pathname" (default), "url", "title", "og:title"
+#  reactions_enabled    : 0 # '1' for enabled, '0' for disabled
+#  theme                : fro # fro is recommended for this theme, you can choose your own
+#  strict               : 0 # 1 for enabled, 0 for disabled (default)
+#  input_position       : top # "top", "bottom" # The comment input box will be placed above or below the comments
+#  emit_metadata        : 0 # 1 for enabled, 0 for disabled (default) # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
+#  lang                 : en
+#  lazy                 : true # true, false # Determine if comments will only be loaded when user scrolls near them.
+
+# Add general links to site pages here
+links:
+  # Resume: /assets/resume.pdf
+  
+# Add links for more focus here
+special_links:
+  # "Search": https://duckduckgo.com
+
+#########################
+# Jekyll settings
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-feed
+
+whitelist:
+  - jekyll-redirect-from
+
+markdown: kramdown
+
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
+collections:
+  my_tags:
+    output: true
+    permalink: /tagged/:slug/
+defaults:
+  - scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: tagged
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /:year-:month-:day-:title
+      # timezone: America/New_York
+      # future: false
+  - scope:
+      path: ""
+    values:
+      type: "page"
+
+exclude: [vendor, "README.md", "LICENSE.txt"]

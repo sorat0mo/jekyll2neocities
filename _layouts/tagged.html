@@ -1,0 +1,47 @@
+---
+layout: compress
+---
+
+{% include head.html %}
+
+<main>
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% if site.tags[page.slug] %}
+    <p>
+        Here be writings, tagged as <b>"{{ page.slug }}"</b>.<br>
+        <small><a href="{{ site.url }}{{ site.baseurl }}{% unless site.blog_as_home %}{% assign blog_page = site.pages | where: "path", "blog.md" | first %}{{ blog_page.url }}{% endunless %}">Remove filter</a></small>
+    </p>
+
+<ul class="blog-posts">
+  {% assign tagged_posts = site.tags[page.slug] | sort: "date" | reverse %}
+  {% for post in tagged_posts %}
+    <li>
+      <span>
+        <i>
+          <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>
+            {{ post.date | date: "%b %-d, %Y" }}
+          </time>
+        </i>
+      </span>
+      <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+    {% else %}
+    <p>
+        There are no posts in {{ page.slug }}.
+    </p>
+    {% endif %}
+
+</main>
+
+{% include footer.html %}
+
+</body>
+
+</html>

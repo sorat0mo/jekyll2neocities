@@ -1,0 +1,45 @@
+name: Deploy Jekyll site to Neocities
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Mark workspace as safe directory
+      run: git config --global --add safe.directory /github/workspace
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+    - name: Build with Jekyll
+      run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+    #- name: Build static site
+    #  uses: jerryjvl/jekyll-build-action@v1
+    - name: Deploy to neocities
+      uses: bcomnes/deploy-to-neocities@v3.0.4
+      with:
+        api_key: ${{ secrets.NEOCITIES_API_KEY }}
+        cleanup: true
+        dist_dir: _site
