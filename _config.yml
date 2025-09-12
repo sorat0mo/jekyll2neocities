@@ -6,8 +6,7 @@ description: A beary cool theme for Jekyll
 url: https://sorat0mo.github.io # Hostname for your site
 baseurl: /bearlyjekyll # This should be "" IF the site files are at the root, i.e. https://example.com/
 
-# Secure Headers in GitHub Pages. Disable ONLY IF you are serving HTTP Response Headers elsewhere.
-use_HSTS: true # HTTP-Strict-Transport-Security;
+# Secure Headers in GitHub Pages. Disable IF you are serving HTTP Response Headers elsewhere.
 use_CSP: true # Content Security Policy;
 
 # Author details, your details.
