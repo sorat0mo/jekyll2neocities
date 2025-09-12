@@ -192,14 +192,6 @@ The **IUCN** estimates bear populations to be declining in several regions.
 
 ---
 
-## Inline HTML
-
-<div style="border: 1px solid #9174b7; padding: 1em; background: rgba(181,159,225,0.18);">
-  <strong>Did you know?</strong> Some bear species can weigh over <span style="color:#9174b7;">1,000 pounds</span>!
-</div>
-
----
-
 ## Conclusion
 
 Bears are amazing creatures. This post has demonstrated a variety of Markdown features, all themed around bears.
