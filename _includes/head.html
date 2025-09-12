@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    {% if site.HSTS %}<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">{% endif %}
-    {% if site.CSP %}<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://giscus.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://upload.wikimedia.org https://avatars.githubusercontent.com https://user-images.githubusercontent.com; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">{% endif %}
+    {% if site.use_HSTS %}<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">{% endif %}
+    {% if site.use_CSP %}<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://giscus.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://upload.wikimedia.org https://avatars.githubusercontent.com https://user-images.githubusercontent.com; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">{% endif %}
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png">
     <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
