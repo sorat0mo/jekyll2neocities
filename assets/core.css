@@ -51,13 +51,15 @@ strong, b {
 }
 
 /* LINKS */
-a {
+a, 
+a.notfound:visited {
     color: var(--text-color);
     text-decoration: none;
     transition: none;
 }
 
 a:hover,
+a.notfound:visited:hover,
 a:focus {
     color: var(--link-color);
     text-decoration: underline;
@@ -65,10 +67,6 @@ a:focus {
 
 a:visited {
     color: var(--visited-color);
-}
-
-a.notfound:visited {
-    color: var(--text-color);
 }
 
 /* Simplified post-title styles - removed redundant background overrides */
