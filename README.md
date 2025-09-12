@@ -14,7 +14,7 @@ I solicited help from GitHub Copilot in helping me modify the original code. If 
 
 2. More themes. Each of theme are unique and offers good visibility in both light and dark mode(Except geek which is always dark)
 
-3. Removed original link animation and external link arrows. Replaced with simple text color change and underline for responsiveness.
+3. Removed original link animation and external link arrows. Replaced with underline for responsiveness (just like bear).
 
 4. Added giscus for comments. It's optinal, if you don't want it, you can remove it.
 
