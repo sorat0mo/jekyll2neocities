@@ -54,8 +54,9 @@ strong, b {
 a, 
 a.notfound:visited,
 nav a:visited,
+small a:visited,
 footer.bottom-footer a:visited {
-    color: var(--text-color);
+    color: var(--link-color);
     text-decoration: none;
     transition: none;
 }
@@ -64,8 +65,9 @@ a:focus,
 a:hover,
 a.notfound:visited:hover,
 nav a:visited:hover,
+small a:visited:hover,
 footer.bottom-footer a:visited:hover {
-    color: var(--link-color);
+    color: var(--hover-color);
     text-decoration: underline;
 }
 
@@ -75,14 +77,14 @@ a:visited {
 
 /* Simplified post-title styles - removed redundant background overrides */
 a.post-title {
-    color: var(--text-color);
+    color: var(--link-color);
     text-decoration: none;
     transition: none;
 }
 
 a.post-title:hover,
 a.post-title:focus {
-    color: var(--link-color);
+    color: var(--hover-color);
     text-decoration: underline;
 }
 
