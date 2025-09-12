@@ -13,15 +13,7 @@
     --code-color: #222; /* Match heading color for contrast */
     --blockquote-color: #222; /* As in bear.css */
     --blockquote-text-color: #222;
-
-    /* Interactive/utility colors */
-    --hover-color: #f8fafc; /* Slight off-white for hover */
     --border-color: #bbb; /* Soft gray for borders */
-    --shadow-color: rgba(50, 115, 220, 0.15); /* Subtle shadow in link color */
-
-    /* Glow effects for interactive elements */
-    --glow-color-light: rgba(50, 115, 220, 0.13);
-    --glow-color-medium: rgba(50, 115, 220, 0.25);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,12 +28,6 @@
         --code-color: #b4e88d; /* Match heading color */
         --blockquote-color: #ccc;
         --blockquote-text-color: #ddd;
-
-        --hover-color: #0a2733;
         --border-color: #35748d;
-        --shadow-color: rgba(140, 194, 221, 0.15);
-
-        --glow-color-light: rgba(140, 194, 221, 0.13);
-        --glow-color-medium: rgba(140, 194, 221, 0.25);
     }
 }

@@ -13,13 +13,5 @@
     --code-color: #ffffff;               /* Just white */
     --blockquote-color: #111111;         /* Extra dark */
     --blockquote-text-color: #39ff14;
-
-    /* Interactive colors derived from theme */
-    --hover-color: #222222;
     --border-color: var(--blockquote-color);
-    --shadow-color: rgba(0, 255, 0, 0.18);
-
-    /* Glow effects for interactive elements */
-    --glow-color-light: rgba(57, 255, 20, 0.3);
-    --glow-color-medium: rgba(57, 255, 20, 0.5);
 }

@@ -14,15 +14,7 @@
     --code-color: #25382c;
     --blockquote-color: #7A9B85; /* Sage green */
     --blockquote-text-color: #1A3025;
-
-    /* Interactive colors derived from theme */
-    --hover-color: white;
     --border-color: var(--blockquote-color);
-    --shadow-color: rgba(0, 0, 0, 0.18);
-
-    /* Glow effects for interactive elements */
-    --glow-color-light: rgba(45, 80, 22, 0.3);
-    --glow-color-medium: rgba(45, 80, 22, 0.5);
 }
 
 /* Dark Mode Color Overrides */
@@ -38,9 +30,6 @@
         --code-color: #e7f8e4; /* Light pine mist */
         --blockquote-color: #4A6B52; /* Forest undergrowth */
         --blockquote-text-color: #C8D8CE;
-
-        /* Dark mode glow effects */
-        --glow-color-light: rgba(122, 176, 105, 0.3);
-        --glow-color-medium: rgba(122, 176, 105, 0.5);
+        --border-color: var(--blockquote-color);
     }
 }

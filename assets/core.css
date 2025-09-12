@@ -67,7 +67,6 @@ a.notfound:visited:hover,
 nav a:visited:hover,
 small a:visited:hover,
 footer.bottom-footer a:visited:hover {
-    color: var(--hover-color);
     text-decoration: underline;
 }
 
@@ -84,7 +83,6 @@ a.post-title {
 
 a.post-title:hover,
 a.post-title:focus {
-    color: var(--hover-color);
     text-decoration: underline;
 }
 
