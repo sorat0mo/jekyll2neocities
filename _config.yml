@@ -23,20 +23,20 @@ blog_as_home: false # true/false - if you set to false, you can set how your blo
 blog_tagline: Paws, claws, and thoughts—notes from a bear’s den.
 
 # Comments. I only added giscus for support, feel free to expand yourself.
-#giscus: # Go to giscus.app for instructions on how to use
-#  hostname             : giscus.app # Default, change if you host your own instance
-#  repo                 : sorat0mo/bearlyjekyll #The path to your repo
-#  repo_id              : R_kgDOPtN4aA # Shown during giscus setup at https://giscus.app
-#  category_name        : General # Full text name of the category
-#  category_id          : DIC_kwDOPtN4aM4CvPyG # Shown during giscus setup at https://giscus.app
-#  mapping              : pathname # "pathname" (default), "url", "title", "og:title"
-#  reactions_enabled    : 0 # '1' for enabled, '0' for disabled
-#  theme                : fro # fro is recommended for this theme, you can choose your own
-#  strict               : 0 # 1 for enabled, 0 for disabled (default)
-#  input_position       : top # "top", "bottom" # The comment input box will be placed above or below the comments
-#  emit_metadata        : 0 # 1 for enabled, 0 for disabled (default) # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
-#  lang                 : en
-#  lazy                 : true # true, false # Determine if comments will only be loaded when user scrolls near them.
+giscus: # Go to giscus.app for instructions on how to use
+  hostname             : giscus.app # Default, change if you host your own instance
+  repo                 : sorat0mo/bearlyjekyll #The path to your repo
+  repo_id              : R_kgDOPtN4aA # Shown during giscus setup at https://giscus.app
+  category_name        : General # Full text name of the category
+  category_id          : DIC_kwDOPtN4aM4CvPyG # Shown during giscus setup at https://giscus.app
+  mapping              : pathname # "pathname" (default), "url", "title", "og:title"
+  reactions_enabled    : 0 # '1' for enabled, '0' for disabled
+  theme                : transparent_dark #
+  strict               : 0 # 1 for enabled, 0 for disabled (default)
+  input_position       : top # "top", "bottom" # The comment input box will be placed above or below the comments
+  emit_metadata        : 0 # 1 for enabled, 0 for disabled (default) # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
+  lang                 : en
+  lazy                 : true # true, false # Determine if comments will only be loaded when user scrolls near them.
 
 # Add general links to site pages here
 links:
