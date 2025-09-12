@@ -31,7 +31,7 @@ giscus: # Go to giscus.app for instructions on how to use
   category_id          : DIC_kwDOPtN4aM4CvPyG # Shown during giscus setup at https://giscus.app
   mapping              : pathname # "pathname" (default), "url", "title", "og:title"
   reactions_enabled    : 0 # '1' for enabled, '0' for disabled
-  theme                : preferred_color_scheme #
+  theme                : fro #
   strict               : 0 # 1 for enabled, 0 for disabled (default)
   input_position       : top # "top", "bottom" # The comment input box will be placed above or below the comments
   emit_metadata        : 0 # 1 for enabled, 0 for disabled (default) # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
