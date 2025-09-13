@@ -28,7 +28,7 @@ layout: compress
 
 </main>
 
-{% if site.giscus.repo_id and site.giscus.hostname %}
+{% if site.giscus.repo_id and site.giscus.hostname and page.comments != false %}
 <br>
 <script src="https://{{ site.giscus.hostname }}/client.js"
         data-repo="{{ site.giscus.repo }}"

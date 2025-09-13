@@ -26,6 +26,23 @@ I solicited help from GitHub Copilot in helping me modify the original code. If 
 
 8. You can use blog feed as homepage. The homepage for your blog will be list of your posts.
 
+## Writing a post
+To write a new post, create a new file in the `_posts` directory, the filename should be `YYYY-MM-DD-PostName.md`. For example, `2025-09-13-Hello.md`.
+
+In Jekyll, data like post date, tags, post name are stored in *front matter* before the post's actual content.
+
+```yaml
+---
+title: "Meet the Bears: An Image Gallery"
+date: 2025-09-11
+layout: post
+tags: [general, bears]
+comments: false
+---
+```
+
+All of these can be omitted except title. If you do not set a date, Jekyll will default to using the date in the post name. If you do not set a tag, the post will simply do not have tags. Comments are enabled for all posts by default, if you have certain posts where you do not wish enable comments, use `comments: false` in the front matter. See the sample posts for examples.
+
 ## Configuration
 
 | Key                         | Description                                                                                                                                                                                                                                                                                                                                                |

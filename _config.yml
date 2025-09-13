@@ -87,8 +87,7 @@ defaults:
     values:
       layout: post
       permalink: /:year-:month-:day-:title
-      # timezone: America/New_York
-      # future: false
+      comments: true
   - scope:
       path: ""
     values:

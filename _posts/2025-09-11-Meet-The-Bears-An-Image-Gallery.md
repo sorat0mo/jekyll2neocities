@@ -3,6 +3,7 @@ title: "Meet the Bears: An Image Gallery"
 date: 2025-09-11
 layout: post
 tags: [general, bears]
+comments: false
 ---
 
 Bears are fascinating creatures found in diverse habitats around the world. Each species has unique traits and adaptations that make them special. In this post, we'll introduce several bear species and showcase them using the custom **image-gallery** feature on this site.

@@ -1,7 +1,5 @@
 ---
 title: "Markdown Rendering Test"
-date: 2025-09-10
-layout: post
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum, leo eget luctus tristique, enim ex dictum orci, et viverra leo lacus quis sem. Integer dictum augue at nulla egestas, in elementum erat luctus. Pellentesque euismod leo sed urna dictum, nec laoreet sem euismod. Etiam euismod euismod massa, et faucibus erat cursus malesuada. Phasellus condimentum, lorem ac cursus consequat, sapien nulla rutrum velit, id porttitor mauris libero eget ante. Quisque gravida velit ut orci dictum, et pretium urna cursus. Proin euismod mauris ut ullamcorper consectetur. Suspendisse sagittis facilisis magna, nec dictum massa consequat vitae.
